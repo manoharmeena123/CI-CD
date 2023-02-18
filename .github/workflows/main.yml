@@ -1,1 +1,103 @@
+# workflow
+#YML -> YML is a mark-up language
 
+# read and understand a series of steps and operations
+# the machine can read this to automate tasks
+
+#key: value
+# key - title
+# value - website name
+
+title: Website Name
+description: a website for uploading content
+age: 22
+
+# datastructures --->
+# strings, arrays, objects
+
+# Array -------------> how to write an Array
+keys:
+  -technology
+  -images
+  -creative
+
+  # Identation matters --------> (throw an error)
+  # spaces also matters
+
+  # Objects --------------> how to write an Objects
+address:
+  Street: Main market
+  City: Indore
+  state: MP
+
+  # working with GitHub actions there are some env variables :->
+  #----------> to refer to a variable in this manner
+
+  value: ${{env.VALUE}}
+  variables: ${{github.VARIABLE_NAME}}
+
+  ####
+#   ---------------------------------------------------------->
+
+# title: Website Name
+# description: a website for uploading content
+# age: 22
+# keys: -technology -images -creative
+# address:
+#   Street: Main market
+#   City: Jhansi
+#   state: UP
+#   value: ${{env.VALUE}}
+#   variables: ${{github.VARIABLE_NAME}}
+
+#-------------------------------------------------------------->
+
+# ---------------> (it is a confirugation file for github)
+# . github ,
+# on -------> triggered , on push, on pr request
+# .docker
+# .jenkins
+# .aws
+# .package.json
+# .ts.config.json
+
+#  how to work work with yml---------->
+#steps -> seq of tasks or action that make a job
+
+name: Github action ofr
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Print Manohar
+        run: echo "Hey Manohar"
+# title: Website Name
+# description: a website for uploading content
+# age: 22
+# keys: -technology -images -creative
+# address:
+#   Street: Main market
+#   City: Indore
+#   state: MP
+#   value: ${{env.VALUE}}
+#   variables: ${{github.VARIABLE_NAME}}
+# name: My Application
+# on:
+#   push:
+#     branches: -main
+#   pull_request:
+#     branches: -main
+# NAME: Github action for
+# ON:
+#   push:
+#     branches:
+#       - main
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       -uses: actions/checkout@v2
+#       -name: Print Manohar
+#       run: echo "Hey Manohar"
